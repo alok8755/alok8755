@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+            <div id="left">
+
+                <div class="sidenav">
+                
+                    <div type="button" id="closeSidebar"><i class="fa fa-window-close"></i> Close</div>
+                    <a href="<?=merge_querystring($url,'?category=all');?>">All</a>
+                   
+                </div>
+        
+            </div>
+
+            
+            <div id="main-container">
+
+                <div id="main">
+
+                    <?php displayPosts("public"); ?>
+                                
+                </div>
+                <div id="right">
+
+                    <?php displayPostBox(); ?>
+                    <hr>
+                    <?php displayTitle(); ?>
+
+                </div>
+
+            </div>
+
+        </div>
+
