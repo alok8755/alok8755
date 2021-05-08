@@ -1,0 +1,44 @@
+<div class="container-fluid">
+
+            <div id="left">
+
+                <div class="sidenav">
+                
+                    <div type="button" id="closeSidebar"><i class="fa fa-window-close"></i> Close</div>
+                    <a href="<?=merge_querystring($url,'?category=all');?>">All</a>
+                  
+                </div>
+        
+            </div>
+
+            
+            <div id="main-container">
+
+                <div id="main">
+
+                    <?php if (array_key_exists("userid",$_GET)) { ?>
+                        
+                    <?php displayPosts($_GET['userid']); ?>
+
+                    <?php } ?> 
+
+                    <br><br><hr>
+
+                    <h2>Active Users</h2>
+
+                    <?php displayUsers(); ?>
+
+                                
+                    </div>
+                <div id="right">
+
+                    <?php displayPostBox(); ?>
+                    <hr>
+                    <?php displayTitle(); ?>
+
+                </div>
+
+            </div>
+
+        </div>
+        
